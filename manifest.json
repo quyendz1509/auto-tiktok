@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Top Top Auto - 1.0",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.tiktok.com/*"],
+      "js": ["dist/content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "description": "Tương tác tự động follow và tym cho tiktok.",
+  "permissions": ["tabs","scripting"],
+  "icons": {
+    "128": "tiktok.png",
+    "48": "tiktok.png",
+    "16": "tiktok.png"
+
+
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  }
+
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Your Extension</title>
+  <link rel="stylesheet" href="dist/flowbite.min.css">
+  <link rel="stylesheet" href="dist/output.css">
+  <script src="/dist/popup.js"></script>
+</head>
+<body class="w-96 max-w-lg min-w-full" >
+  <!--  -->
+  <div class=" mt-1 px-3 py-4 gap-3 flex items-center justify-center border-b border-gray-400">
+    <img src="tiktok.png" class="w-8 drop-shadow-md" alt="">
+    <h3 class="text-xl font-extrabold underline underline-bg decoration-pink-600">TOP TOP AUTO - V1.0</h3>
+  </div>
+  <!--  -->
+
+  <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+      <li class="mr-2" role="presentation">
+        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tự động tương tác</button>
+      </li>
+      <!-- <li class="mr-2" role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Auto Tym</button>
+        </li> -->
+        <li class="mr-2" role="presentation">
+          <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Tải video</button>
+        </li>
+      </ul>
+    </div>
+    <div id="myTabContent" class="m-5">
+      <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <p class="text-sm text-gray-900 dark:text-gray-400"><strong class="underline decoration-blue-500 font-bold">Tự động tương tác</strong> là chức năng tự động <span class="text-pink-500 font-bold">follow</span>  và <span class="text-pink-500 font-bold">tym video</span> những tài khoản đề xuất trên bảng tin của bạn theo thời gian được quy định sẵn.</p>
+        <div class="grid grid-cols-2 gap-2 w-full justify-center items-center">
+          <div class="col-span-1 w-full h-full flex flex-col">
+            <span class="text-lg font-bold">DA</span>
+            <input type="number" placeholder="3" min="1" value="3" class="w-full rounded-lg py-1 delay-action">
+            <span class="text-md italic font-semibold"><strong class="text-pink-500">DA:</strong> Độ trễ hành động tym và  follow. Khuyến nghị 3 giây </span>
+          </div>
+          <!--  -->
+          <div class="col-span-1 w-full h-full flex flex-col">
+            <span class="text-lg font-bold">DL</span>
+            <input type="number" placeholder="10" min="1" value="15" class="w-full rounded-lg py-1 delay-loop">
+            <span class="text-md italic font-semibold"><strong class="text-pink-500">DL:</strong> Độ trễ vòng lặp. Khuyến nghị 10 - 15 giây </span>
+          </div>
+          <!--  -->
+          <div class="col-span-2 w-full flex flex-col">
+            <div class="col-span-2 w-full h-full flex flex-col">
+              <span class="text-lg font-bold">SL</span>
+              <input type="text" placeholder="1" min="1" max="1000" value="100" class="w-full rounded-lg py-1 so-luong caret-blue-500">
+              <span class="text-md italic font-semibold whitespace-pre-line"><strong class="text-pink-500">SL:</strong> Số lượng cần chạy. 
+                <span class="break-words">(Lưu ý do chính sách của tiktok nên việc chạy follow và tym có thể bị hủy.)</span> </span>
+              </div>
+
+
+            </div>
+            <div class="w-full grid grid-cols-2 col-span-2 gap-6 justify-between">
+             <div class="text-center col-span-1 w-full flex flex-col gap-2">
+              <button class="rounded-lg font-semibold w-full text-lg bg-slate-200/60 hover:bg-slate-200 px-4 text-gray-800 py-2 btn-start">Bắt đầu</button>
+            </div>
+            <div class="text-center col-span-1 w-full flex flex-col gap-2">
+              <button class="rounded-lg font-semibold w-full text-lg bg-slate-200/60 hover:bg-slate-200 px-4 text-red-800 py-2 btn-stop">Dừng</button>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <!--  -->
+  <!-- <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+    <p class="text-sm text-gray-900 dark:text-gray-400"><strong class="underline decoration-pink-500 font-bold">Auto Tym</strong> là chức năng tự động thả tym những tài khoản đề xuất trên bảng tin của bạn theo thời gian được quy định sẵn.</p>
+  </div> -->
+  <!--  -->
+  <div class="hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+    <p class="text-sm text-gray-900 dark:text-gray-400"><strong class="underline decoration-pink-500 font-bold">Tải video</strong> là chức năng tự động tải video trên nền tảng tiktok không dính Watermarked (Logo tiktok).
+     <br> Lưu ý định dạng đường dẫn video phải là:  
+   </p>
+
+   <blockquote class="text-lg w-full italic font-semibold text-gray-900 dark:text-white my-2 bg-slate-100 p-2">
+    <p>"tiktok.com/@user/video/3141..."</p>
+  </blockquote>
+  <p class="text-sm text-gray-500 italic ">
+   Xem chi tiết video tiktok sẽ hiển thị URL như trên !
+ </p>
+ <button id="get-video" class="text-lg bg-gray-300 text-white font-semibold px-4 rounded-lg py-2  flex items-center flex-col justify-center">
+  <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white loading hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+  </svg>
+  <span>Sắp ra mắt 👁️</span>
+</button>
+</div>
+<!-- footer -->
+<div class="w-100 text-center mt-2">
+  <p>Liên hệ báo lỗi: <a class="text-center mt-2 font-bold hover:underline text-pink-600" href="https://zalo.me/0915606449">Quyền.Dev</a></p>
+</div>
+
+</div>
+
+<!--  -->
+<script src="dist/flowbite.min.js"></script>
+
+</body>
+</html>
