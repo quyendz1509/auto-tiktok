@@ -20,6 +20,7 @@ function countdownzzzzz(seconds,element) {
 
 function makeClearAll(){
  let check_htmldiv = document.querySelector('#dem-time');
+ iterationCount = 0;
  check_htmldiv.innerHTML = 'Hoàn Thành !';
  setTimeout( ()=>{
   check_htmldiv.remove();
