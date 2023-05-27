@@ -1,5 +1,6 @@
 # TOP TOP AUTO - v1.0
 <img src="tiktok.png" width="60">
+
 **TOP TOP AUTO** là một tiện ích mở rộng phát triển nhằm giúp tài khoản tiktok tự động follow và thả tym vào video đề xuất tự động một cách đơn giản hóa.
 
 ## LƯU Ý
